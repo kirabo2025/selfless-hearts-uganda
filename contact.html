@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Selfless Hearts for the Needy - Uganda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      background-color: #0a6c5d;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background-color: #e6f4f1;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .header h1 {
+      color: #0a6c5d;
+      margin-bottom: 10px;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    h2 {
+      color: #0a6c5d;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    /* ===== CONTACT INFO ===== */
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    /* ===== FORM ===== */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background-color: #0a6c5d;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #08594c;
+    }
+
+    /* ===== WHATSAPP BUTTON ===== */
+    .whatsapp {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .whatsapp:hover {
+      background-color: #1ebe5d;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #777;
+      background-color: #f4f7f6;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="programs.html">Programs</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Contact Us</h1>
+    <p>We would love to hear from you</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>
+          Whether you want to support our work, ask a question, or partner with us,
+          feel free to reach out.
+        </p>
+
+        <p><strong>Organization:</strong> Selfless Hearts for the Needy - Uganda</p>
+        <p><strong>Location:</strong> Mukono Uganda</p>
+        <p><strong>Email:</strong> selflessheartsuganda@gmail.com</p>
+        <p><strong>Phone:</strong> +256 XXX XXX XXX</p>
+
+        <a class="whatsapp" 
+           href="https://wa.me/+256701735887" 
+           target="_blank">
+          💬 Chat with us on WhatsApp
+        </a>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div>
+        <h2>Send Us a Message</h2>
+
+        <form id="contactForm">
+  <input type="text" placeholder="Your Full Name" required>
+  <input type="email" placeholder="Your Email" required>
+  <textarea placeholder="Your Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+
+  <p id="successMessage" style="display:none; color: green; margin-top: 15px; font-weight: bold;">
+    ✅ Thank you! Your message has been sent successfully.
+  </p>
+</form>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © Selfless Hearts for the Needy - Uganda
+  </footer>
+<script>
+  const form = document.getElementById("contactForm");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // stop page reload
+
+    successMessage.style.display = "block";
+    form.reset();
+
+    setTimeout(() => {
+      successMessage.style.display = "none";
+    }, 5000);
+  });
+</script>
+
+</body>
+</html>
