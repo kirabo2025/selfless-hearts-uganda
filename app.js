@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/items';
+const API_URL = https://selfless-backened-1.onrender.com
 
 async function fetchItems() {
   const res = await fetch(API_URL);
